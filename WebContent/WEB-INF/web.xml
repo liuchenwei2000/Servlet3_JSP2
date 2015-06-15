@@ -39,7 +39,7 @@
   
   <context-param>
   	<param-name>appname</param-name>
-  	<param-value>JSP2 demo</param-value>
+  	<param-value>Servlet3/JSP2 demo</param-value>
   </context-param>
 
 </web-app>
