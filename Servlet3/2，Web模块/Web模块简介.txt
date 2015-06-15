@@ -1,0 +1,5 @@
+Servlet3.0 规范不再要求所有Web组件（如Servlet、Listener、Filter）都部署在web.xml中，而是允许采用“Web模块”来部署、管理它们。
+
+Web模块通常对应一个Jar包，这个Jar包有如下文件结构：
+jar/META-INF/web-fragment.xml
+jar/Web模块所用的类文件、资源文件等。

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!-- 定义函数的方法与定义标签的方法大致相似。-->
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+
+	<tlib-version>1.0</tlib-version>
+	<short-name>myfunction</short-name>
+	<uri>http://taglib.myfunction.com</uri>
+
+	<!-- function 元素用于定义自定义函数 -->
+	<function>
+		<!-- 指定自定义函数的函数名。 -->
+		<name>lower</name>
+		<!-- 指定自定义函数的处理类。 -->
+		<function-class>el.StringUtil</function-class>
+		<!-- 指定自定义函数对应的方法。 -->
+		<function-signature>java.lang.String toLower(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>upper</name>
+		<function-class>el.StringUtil</function-class>
+		<function-signature>java.lang.String toUpper(java.lang.String)</function-signature>
+	</function>
+</taglib>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 也可以通过web.xml文件指定各Web模块加载的绝对顺序，这里的顺序会覆盖Web模块中web-fragment.xml文件指定的加载顺序。 -->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0">
+	
+	<!-- 指定Web模块按如下顺序加载 -->
+	<absolute-ordering>
+		<name>initsd</name>
+		<name>initlistener</name>
+	</absolute-ordering>
+</web-app>
