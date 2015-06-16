@@ -36,7 +36,7 @@ public class LongTask implements Runnable {
 			HttpServletRequest request = (HttpServletRequest) async.getRequest();
 			request.setAttribute("books", books);
 			
-			async.dispatch("/async.jsp");
+			async.dispatch("/async/async.jsp");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

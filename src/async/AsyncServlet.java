@@ -25,7 +25,10 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name="async", urlPatterns={"/async.do"}, asyncSupported=true)
 public class AsyncServlet extends HttpServlet {
 
-	private static final long serialVersionUID = 1L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -627464362397788392L;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
