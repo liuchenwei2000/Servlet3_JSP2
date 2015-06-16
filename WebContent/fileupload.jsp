@@ -15,9 +15,8 @@
 		multipart/form-data：以二进制流的方式来处理表单数据。
 		text/plain：当表单的action属性为 mailto:URL 的形式时比较方便，主要适合于直接通过表单发送邮件的方式。
 		-->
-		<form method="post" action="upload.do" enctype="multipart/form-data">
-			文件名：<input type="text" id="name" name="name" />
-			选择文件：<input type="file" id="file" name="file" />
+		<form method="post" action="fileupload.do" enctype="multipart/form-data">
+			选择文件：<input type="file" name="afile" />
 			<input type="submit" value="上传" />
 		</form>
 	</body>

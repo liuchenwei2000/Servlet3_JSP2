@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<web-fragment xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-fragment_3_1.xsd"
+  version="3.1">
+	
+	<name>module2</name>
+	
+	<listener>
+		<listener-class>fragment.Listener2</listener-class>
+	</listener>
+
+    <!-- 用于指定加载该Web模块的相对顺序。 -->
+	<ordering>
+		<!-- 也可以配置该Web模块必须位于哪些模块之后加载。 -->
+		<after>
+			<name>module1</name>
+		</after>
+	</ordering>
+</web-fragment>

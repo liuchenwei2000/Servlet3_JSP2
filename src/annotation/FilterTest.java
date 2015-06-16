@@ -28,7 +28,8 @@ import javax.servlet.annotation.WebInitParam;
 		@WebInitParam(name = "user", value = "tom"),
 		@WebInitParam(name = "password", value = "111") }, 
 		/** 设置该Filter仅对指定的模式的请求进行过滤 */
-		dispatcherTypes = {DispatcherType.REQUEST, DispatcherType.FORWARD, DispatcherType.INCLUDE })
+		dispatcherTypes = {DispatcherType.REQUEST, DispatcherType.FORWARD, DispatcherType.INCLUDE },
+		asyncSupported = true)
 public class FilterTest implements Filter {
 
 	@Override

@@ -9,7 +9,7 @@
 	
 	<!-- 指定Web模块按如下顺序加载 -->
 	<absolute-ordering>
-		<name>initsd</name>
-		<name>initlistener</name>
+		<name>module1</name>
+		<name>module2</name>
 	</absolute-ordering>
 </web-app>
