@@ -1,6 +1,9 @@
 <%@ page contentType="text/html;charset=GBK" language="java" %>
 
-<%-- 一样需要先导入标签库，然后再使用函数，使用方式和自定义标签类似。 --%>
+<%-- 
+使用方式和自定义标签类似，同样需要先导入标签库，然后再使用函数。 
+其中 uri 属性值与 *.tld 文件中的 uri 属性值保持一致。
+--%>
 <%@ taglib prefix="myfunction" uri="http://taglib.myfunction.com" %>
 <!DOCTYPE html>
 <html>

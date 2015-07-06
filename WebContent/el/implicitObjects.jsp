@@ -143,7 +143,11 @@
 			<tr>
 				<td>隐式对象的其他作用（错误的方式）</td>
 				<td>\${my.today.time}</td>
-				<td>${my.today}</td>
+				<!--  
+				EL 能友好地处理 null，它能处理 unknown 或 null 值，即使找不到表达式中指定的 attribute、property、key，也会显示页面。
+				在算数表达式中，EL 把 null 值看作是 0；在逻辑表达式中，EL 把 null 值看作是 false。
+				-->
+				<td>${my.today.time}</td>
 			</tr>
 			
 			<tr>
