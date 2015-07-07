@@ -53,6 +53,13 @@
 		\${list[map.two]}：${list[map.two]}
 		<br>
 		\${list[map["two"]]}：${list[map["two"]]}
+		<br>
+		<!-- empty 操作符可以用来检查后面的参数是否为 null 或为空 -->
+		\${empty map["two"]}：${empty map["two"]}
+		<br>
+		\${empty map["three"]}：${empty map["three"]}
+		<br>
+		\${empty ""}：${empty ""}
 	</body>
 </html>
 
