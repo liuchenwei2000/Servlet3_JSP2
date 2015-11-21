@@ -1,6 +1,6 @@
 
-Èç¹û´òËãÊ¹ÓÃ Annotation À´ÅäÖÃServlet£¬ÄÇÃ´Òª±£Ö¤£º
-1£¬²»ÒªÔÚweb.xmlÎÄ¼şµÄ¸ùÔªËØ£¨<web-app>£©ÖĞÖ¸¶¨ metadata-complete="true"¡£
-2£¬²»ÒªÔÚweb.xmlÎÄ¼şÖĞÅäÖÃ¸ÃServlet¡£
+å¦‚æœæ‰“ç®—ä½¿ç”¨ Annotation æ¥é…ç½®Servletï¼Œé‚£ä¹ˆè¦ä¿è¯ï¼š
+1ï¼Œä¸è¦åœ¨web.xmlæ–‡ä»¶çš„æ ¹å…ƒç´ ï¼ˆ<web-app>ï¼‰ä¸­æŒ‡å®š metadata-complete="true"ã€‚
+2ï¼Œä¸è¦åœ¨web.xmlæ–‡ä»¶ä¸­é…ç½®è¯¥Servletã€‚
 
-Ê¾Àı¼û src/annotation °ü¡£
+ç¤ºä¾‹è§ src/annotation åŒ…ã€‚

@@ -8,13 +8,13 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 /**
- * Ê¹ÓÃAnnotationÅäÖÃListenerÊ¾Àı
+ * ä½¿ç”¨Annotationé…ç½®Listenerç¤ºä¾‹
  * <p>
- * @WebListener ÓÃÓÚ²¿ÊğListenerÀà¡£
+ * @WebListener ç”¨äºéƒ¨ç½²Listenerç±»ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-1-11
+ * åˆ›å»ºæ—¥æœŸï¼š2014-1-11
  */
 @WebListener
 public class ListenerTest implements ServletContextListener {

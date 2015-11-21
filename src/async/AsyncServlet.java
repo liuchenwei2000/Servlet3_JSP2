@@ -15,13 +15,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Òì²½´¦Àí servletÊ¾Àı
+ * å¼‚æ­¥å¤„ç† servletç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-1-11
+ * åˆ›å»ºæ—¥æœŸï¼š2014-1-11
  */
-// ¶ÔÏ£ÍûÆôÓÃÒì²½µ÷ÓÃµÄServlet¶øÑÔ£¬ĞèÒªÏÔÊ½Ö¸¶¨¿ªÆôÒì²½µ÷ÓÃ£¬»òÊ¹ÓÃ @WebServlet µÄ asyncSupported ÊôĞÔ»òÕßÔÚ web.xml ÖĞ½øĞĞÅäÖÃ¡£
+// å¯¹å¸Œæœ›å¯ç”¨å¼‚æ­¥è°ƒç”¨çš„Servletè€Œè¨€ï¼Œéœ€è¦æ˜¾å¼æŒ‡å®šå¼€å¯å¼‚æ­¥è°ƒç”¨ï¼Œæˆ–ä½¿ç”¨ @WebServlet çš„ asyncSupported å±æ€§æˆ–è€…åœ¨ web.xml ä¸­è¿›è¡Œé…ç½®ã€‚
 @WebServlet(name="async", urlPatterns={"/async.do"}, asyncSupported=true)
 public class AsyncServlet extends HttpServlet {
 
@@ -36,20 +36,20 @@ public class AsyncServlet extends HttpServlet {
 		response.setContentType("text/html;charset=GBK");
 		
 		PrintWriter out = response.getWriter();
-		out.println("<title>Òì²½µ÷ÓÃÊ¾Àı</title>");
-		out.println("½øÈëservletµÄÊ±¼ä £º" + new Date() + "</br>");
+		out.println("<title>å¼‚æ­¥è°ƒç”¨ç¤ºä¾‹</title>");
+		out.println("è¿›å…¥servletçš„æ—¶é—´ ï¼š" + new Date() + "</br>");
 		
-		// Í¨¹ıAsyncContextÀàÀ´´¦ÀíÒì²½µ÷ÓÃ
-		// ´´½¨AsyncContext£¬¿ªÊ¼Òì²½µ÷ÓÃ
+		// é€šè¿‡AsyncContextç±»æ¥å¤„ç†å¼‚æ­¥è°ƒç”¨
+		// åˆ›å»ºAsyncContextï¼Œå¼€å§‹å¼‚æ­¥è°ƒç”¨
 		AsyncContext async = request.startAsync();
-		// ÎªÒì²½µ÷ÓÃ×¢²á¼àÌıÆ÷
+		// ä¸ºå¼‚æ­¥è°ƒç”¨æ³¨å†Œç›‘å¬å™¨
 		async.addListener(new MyAsyncListener());
-		// ÉèÖÃÒì²½µ÷ÓÃµÄ³¬Ê±Ê±³¤
+		// è®¾ç½®å¼‚æ­¥è°ƒç”¨çš„è¶…æ—¶æ—¶é•¿
 		async.setTimeout(30 * 1000);
-		// Æô¶¯Òì²½µ÷ÓÃµÄÏß³Ì
+		// å¯åŠ¨å¼‚æ­¥è°ƒç”¨çš„çº¿ç¨‹
 		async.start(new LongTask(async));
 		
-		out.println("½áÊøservletµÄÊ±¼ä £º" + new Date() + "</br>");
+		out.println("ç»“æŸservletçš„æ—¶é—´ ï¼š" + new Date() + "</br>");
 		out.flush();
 	}
 }

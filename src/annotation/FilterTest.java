@@ -16,18 +16,18 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
 
 /**
- * Ê¹ÓÃAnnotationÅäÖÃFilterÊ¾Àı
+ * ä½¿ç”¨Annotationé…ç½®Filterç¤ºä¾‹
  * <p>
- * @WebFilter ÓÃÓÚ²¿ÊğFilterÀà¡£
+ * @WebFilter ç”¨äºéƒ¨ç½²Filterç±»ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-1-11
+ * åˆ›å»ºæ—¥æœŸï¼š2014-1-11
  */
 @WebFilter(filterName = "filtertest", urlPatterns = { "/*" }, initParams = {
 		@WebInitParam(name = "user", value = "tom"),
 		@WebInitParam(name = "password", value = "111") }, 
-		/** ÉèÖÃ¸ÃFilter½ö¶ÔÖ¸¶¨µÄÄ£Ê½µÄÇëÇó½øĞĞ¹ıÂË */
+		/** è®¾ç½®è¯¥Filterä»…å¯¹æŒ‡å®šçš„æ¨¡å¼çš„è¯·æ±‚è¿›è¡Œè¿‡æ»¤ */
 		dispatcherTypes = {DispatcherType.REQUEST, DispatcherType.FORWARD, DispatcherType.INCLUDE },
 		asyncSupported = true)
 public class FilterTest implements Filter {

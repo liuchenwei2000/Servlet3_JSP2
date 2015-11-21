@@ -14,18 +14,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Ê¹ÓÃAnnotationÅäÖÃServletÊ¾Àı
+ * ä½¿ç”¨Annotationé…ç½®Servletç¤ºä¾‹
  * <p>
- * @WebServlet ÓÃÓÚ²¿ÊğServletÀà£¬Ö÷ÒªÊôĞÔÈçÏÂ£º
+ * @WebServlet ç”¨äºéƒ¨ç½²Servletç±»ï¼Œä¸»è¦å±æ€§å¦‚ä¸‹ï¼š
  * <p>
- * name£ºÖ¸¶¨¸ÃServletµÄÃû³Æ¡£
- * value»òurlPatterns£ºÖ¸¶¨¸ÃServlet´¦ÀíµÄURL¡£
- * initParams£ºÎª¸ÃServletÅäÖÃ²ÎÊı¡£
- * loadOnStartup£º½«¸ÃServletÅäÖÃ³Éload-on-startup¡£
+ * nameï¼šæŒ‡å®šè¯¥Servletçš„åç§°ã€‚
+ * valueæˆ–urlPatternsï¼šæŒ‡å®šè¯¥Servletå¤„ç†çš„URLã€‚
+ * initParamsï¼šä¸ºè¯¥Servleté…ç½®å‚æ•°ã€‚
+ * loadOnStartupï¼šå°†è¯¥Servleté…ç½®æˆload-on-startupã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-1-11
+ * åˆ›å»ºæ—¥æœŸï¼š2014-1-11
  */
 @WebServlet(name = "servlettest", urlPatterns = { "/st.do" }, loadOnStartup = 1, initParams = {
 		@WebInitParam(name = "user", value = "tom"),
@@ -37,7 +37,7 @@ public class ServletTest extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		// ¿ÉÒÔÍ¨¹ıServletConfig»ñÈ¡ÅäÖÃµÄ²ÎÊı
+		// å¯ä»¥é€šè¿‡ServletConfigè·å–é…ç½®çš„å‚æ•°
 		ServletConfig servletConfig = getServletConfig();
 		String id = servletConfig.getInitParameter("user");
 		String password = servletConfig.getInitParameter("password");

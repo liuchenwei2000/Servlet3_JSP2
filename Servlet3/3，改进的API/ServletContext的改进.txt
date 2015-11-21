@@ -1,7 +1,7 @@
 
-ServletContextÔÊĞíÍ¨¹ı±à³ÌµÄ·½Ê½¶¯Ì¬×¢²áServlet¡¢Filter£¬²¢ÔÊĞí¶¯Ì¬ÉèÖÃWebÓ¦ÓÃµÄ³õÊ¼»¯²ÎÊı¡£
+ServletContextå…è®¸é€šè¿‡ç¼–ç¨‹çš„æ–¹å¼åŠ¨æ€æ³¨å†ŒServletã€Filterï¼Œå¹¶å…è®¸åŠ¨æ€è®¾ç½®Webåº”ç”¨çš„åˆå§‹åŒ–å‚æ•°ã€‚
 
-¶à¸öÖØÔØµÄaddServlet£º¶¯Ì¬µØ×¢²áServlet¡£
-¶à¸öÖØÔØµÄaddFilter£º¶¯Ì¬µØ×¢²áFilter¡£
-¶à¸öÖØÔØµÄaddListener£º¶¯Ì¬µØ×¢²áListener¡£
-setInitParameter(String name, String value)£ºÎªWebÓ¦ÓÃÉèÖÃ³õÊ¼»¯²ÎÊı¡£
+å¤šä¸ªé‡è½½çš„addServletï¼šåŠ¨æ€åœ°æ³¨å†ŒServletã€‚
+å¤šä¸ªé‡è½½çš„addFilterï¼šåŠ¨æ€åœ°æ³¨å†ŒFilterã€‚
+å¤šä¸ªé‡è½½çš„addListenerï¼šåŠ¨æ€åœ°æ³¨å†ŒListenerã€‚
+setInitParameter(String name, String value)ï¼šä¸ºWebåº”ç”¨è®¾ç½®åˆå§‹åŒ–å‚æ•°ã€‚

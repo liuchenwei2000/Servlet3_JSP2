@@ -11,13 +11,13 @@ import javax.servlet.ReadListener;
 import javax.servlet.ServletInputStream;
 
 /**
- * ×Ô¶¨Òå ReadListener
+ * è‡ªå®šä¹‰ ReadListener
  * <p>
- * µÚÈı²½
+ * ç¬¬ä¸‰æ­¥
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2015Äê6ÔÂ16ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2015å¹´6æœˆ16æ—¥
  */
 public class MyReadListener implements ReadListener {
 	
@@ -30,19 +30,19 @@ public class MyReadListener implements ReadListener {
 	}
 
 	/**
-	 * µ±ÓĞÊı¾İ¿ÉÓÃÊ±´¥·¢¸Ã·½·¨
+	 * å½“æœ‰æ•°æ®å¯ç”¨æ—¶è§¦å‘è¯¥æ–¹æ³•
 	 * 
 	 * @see javax.servlet.ReadListener#onDataAvailable()
 	 */
 	@Override
 	public void onDataAvailable() throws IOException {
 		try {
-			// Ä£ÄâÊı¾İ×¼±¸µÄºÄÊ±µÈ´ı
+			// æ¨¡æ‹Ÿæ•°æ®å‡†å¤‡çš„è€—æ—¶ç­‰å¾…
 			TimeUnit.SECONDS.sleep(3);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Êı¾İ¿ÉÓÃ");
+		System.out.println("æ•°æ®å¯ç”¨");
 
 		StringBuilder sb = new StringBuilder();
 		int len = -1;
@@ -61,17 +61,17 @@ public class MyReadListener implements ReadListener {
 	}
 
 	/**
-	 * µ±ËùÓĞÊı¾İ¶ÁÈ¡Íê±Ïºó´¥·¢¸Ã·½·¨
+	 * å½“æ‰€æœ‰æ•°æ®è¯»å–å®Œæ¯•åè§¦å‘è¯¥æ–¹æ³•
 	 * 
 	 * @see javax.servlet.ReadListener#onAllDataRead()
 	 */
 	@Override
 	public void onAllDataRead() throws IOException {
-		System.out.println("Êı¾İ¶ÁÈ¡Íê±Ï");
+		System.out.println("æ•°æ®è¯»å–å®Œæ¯•");
 	}
 
 	/**
-	 * µ±¶ÁÈ¡Êı¾İ³öÏÖ´íÎóÊ±´¥·¢¸Ã·½·¨
+	 * å½“è¯»å–æ•°æ®å‡ºç°é”™è¯¯æ—¶è§¦å‘è¯¥æ–¹æ³•
 	 * 
 	 * @see javax.servlet.ReadListener#onError(java.lang.Throwable)
 	 */

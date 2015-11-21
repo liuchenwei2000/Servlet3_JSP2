@@ -10,11 +10,11 @@ import javax.servlet.AsyncContext;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Ä£ÄâºÄÊ±ÈÎÎñ
+ * æ¨¡æ‹Ÿè€—æ—¶ä»»åŠ¡
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê10ÔÂ16ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´10æœˆ16æ—¥
  */
 public class LongTask implements Runnable {
 	
@@ -26,7 +26,7 @@ public class LongTask implements Runnable {
 
 	public void run() {
 		try {
-			Thread.sleep(3000);// ÔİÍ£3Ãë
+			Thread.sleep(3000);// æš‚åœ3ç§’
 			
 			List<String> books = new ArrayList<String>();
 			books.add("Thinking in Java");

@@ -10,40 +10,40 @@ import javax.servlet.AsyncEvent;
 import javax.servlet.AsyncListener;
 
 /**
- * Òì²½¼àÌıÆ÷Ê¾Àı
+ * å¼‚æ­¥ç›‘å¬å™¨ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê10ÔÂ16ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´10æœˆ16æ—¥
  */
 public class MyAsyncListener implements AsyncListener {
 
 	/**
-	 * µ±Òì²½µ÷ÓÃ¿ªÊ¼Ê±´¥·¢
+	 * å½“å¼‚æ­¥è°ƒç”¨å¼€å§‹æ—¶è§¦å‘
 	 */
 	public void onStartAsync(AsyncEvent arg0) throws IOException {
-		System.out.println("Òì²½µ÷ÓÃ¿ªÊ¼£º" + new Date());
+		System.out.println("å¼‚æ­¥è°ƒç”¨å¼€å§‹ï¼š" + new Date());
 	}
 	
 	/**
-	 * µ±Òì²½µ÷ÓÃ½áÊøÊ±´¥·¢
+	 * å½“å¼‚æ­¥è°ƒç”¨ç»“æŸæ—¶è§¦å‘
 	 */
 	public void onComplete(AsyncEvent arg0) throws IOException {
-		System.out.println("Òì²½µ÷ÓÃ½áÊø£º" + new Date());
+		System.out.println("å¼‚æ­¥è°ƒç”¨ç»“æŸï¼š" + new Date());
 	}
 
 	/**
-	 * µ±Òì²½µ÷ÓÃ³ö´íÊ±´¥·¢
+	 * å½“å¼‚æ­¥è°ƒç”¨å‡ºé”™æ—¶è§¦å‘
 	 */
 	public void onError(AsyncEvent arg0) throws IOException {
-		System.out.println("Òì²½µ÷ÓÃ³ö´í£º" + new Date());
+		System.out.println("å¼‚æ­¥è°ƒç”¨å‡ºé”™ï¼š" + new Date());
 		arg0.getThrowable().printStackTrace();
 	}
 
 	/**
-	 * µ±Òì²½µ÷ÓÃ³¬Ê±Ê±´¥·¢
+	 * å½“å¼‚æ­¥è°ƒç”¨è¶…æ—¶æ—¶è§¦å‘
 	 */
 	public void onTimeout(AsyncEvent arg0) throws IOException {
-		System.out.println("Òì²½µ÷ÓÃ³¬Ê±£º" + new Date());
+		System.out.println("å¼‚æ­¥è°ƒç”¨è¶…æ—¶ï¼š" + new Date());
 	}
 }

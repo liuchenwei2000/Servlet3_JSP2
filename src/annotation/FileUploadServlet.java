@@ -19,13 +19,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 /**
- * ÎÄ¼şÉÏ´«Servlet
+ * æ–‡ä»¶ä¸Šä¼ Servlet
  * <p>
- * @MultipartConfig Ö¸¶¨¸ÃServlet½«»á¸ºÔğ´¦Àí multipart/form-data ÀàĞÍµÄÇëÇó£¬Ö÷ÒªÓÃÓÚÎÄ¼şÉÏ´«¡£
+ * @MultipartConfig æŒ‡å®šè¯¥Servletå°†ä¼šè´Ÿè´£å¤„ç† multipart/form-data ç±»å‹çš„è¯·æ±‚ï¼Œä¸»è¦ç”¨äºæ–‡ä»¶ä¸Šä¼ ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ18ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ18æ—¥
  */
 @WebServlet(name = "upload", urlPatterns = "/fileupload.do", loadOnStartup = 1)
 @MultipartConfig
@@ -41,29 +41,29 @@ public class FileUploadServlet extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
 		
-		/* HttpServletRequestÔö¼ÓÁË¶ÔÎÄ¼şÉÏ´«µÄÖ§³Ö¡£ */
-		// »ñÈ¡ÎÄ¼şÉÏ´«Óò£¬"afile"ÊÇÎÄ¼şÉÏ´«ÓòµÄ name 
+		/* HttpServletRequestå¢åŠ äº†å¯¹æ–‡ä»¶ä¸Šä¼ çš„æ”¯æŒã€‚ */
+		// è·å–æ–‡ä»¶ä¸Šä¼ åŸŸï¼Œ"afile"æ˜¯æ–‡ä»¶ä¸Šä¼ åŸŸçš„ name 
 		Part filePart = request.getPart("afile");
-		String fileName = getFileName(filePart);// ÎÄ¼şÃû
-		String fileType = filePart.getContentType();// ÎÄ¼şÀàĞÍ
-		long fileSize = filePart.getSize();// ÎÄ¼ş´óĞ¡£¬ÒÔbyteÎªµ¥Î»
+		String fileName = getFileName(filePart);// æ–‡ä»¶å
+		String fileType = filePart.getContentType();// æ–‡ä»¶ç±»å‹
+		long fileSize = filePart.getSize();// æ–‡ä»¶å¤§å°ï¼Œä»¥byteä¸ºå•ä½
 		
-		// ËùÔÚÓ¦ÓÃµÄÊµ¼ÊÂ·¾¶
+		// æ‰€åœ¨åº”ç”¨çš„å®é™…è·¯å¾„
 		String newPath = request.getServletContext().getRealPath("/files") + "/" + fileName;
 		
 		OutputStream output = null;
 		InputStream input = null;
 		
 		final PrintWriter writer = response.getWriter();
-		writer.println("file type£º" + fileType + "</br>");
-		writer.println("file size£º" + fileSize / 1024 + " KB</br>");
+		writer.println("file typeï¼š" + fileType + "</br>");
+		writer.println("file sizeï¼š" + fileSize / 1024 + " KB</br>");
 		try {
 			output = new FileOutputStream(new File(newPath));
-			input = filePart.getInputStream();// »ñÈ¡ÉÏ´«ÎÄ¼şµÄ¶ÁÈëÁ÷
+			input = filePart.getInputStream();// è·å–ä¸Šä¼ æ–‡ä»¶çš„è¯»å…¥æµ
 			int read = 0;
 			final byte[] buffer = new byte[1024];
 			while ((read = input.read(buffer)) != -1) {
-				// ½«ÉÏ´«ÎÄ¼şĞ´Èë·şÎñÆ÷´ÅÅÌ
+				// å°†ä¸Šä¼ æ–‡ä»¶å†™å…¥æœåŠ¡å™¨ç£ç›˜
 				output.write(buffer, 0, read);
 			}
 			writer.println("New file " + fileName + " created at " + newPath);

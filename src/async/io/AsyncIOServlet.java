@@ -16,16 +16,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Òì²½IOÊ¾Àı
+ * å¼‚æ­¥IOç¤ºä¾‹
  * <p>
- * Servlet ÖĞÊ¹ÓÃ·Ç×èÈûIO²½ÖèÈçÏÂ£º
- * 1£¬µ÷ÓÃ ServletRequest µÄ startAsync() ·½·¨¿ªÆôÒì²½Ä£Ê½¡£
- * 2£¬Í¨¹ı ServletRequest »ñÈ¡ ServletInputStream£¬²¢ÎªÆäÉèÖÃ¼àÌıÆ÷¡£
- * 3£¬¼àÌıÆ÷ÒªÊµÏÖ ReadListener ½Ó¿Ú£¬ÔÚ¸Ã¼àÌıÆ÷µÄ·½·¨ÖĞ¶ÁÈ¡Êı¾İ¡£
+ * Servlet ä¸­ä½¿ç”¨éé˜»å¡IOæ­¥éª¤å¦‚ä¸‹ï¼š
+ * 1ï¼Œè°ƒç”¨ ServletRequest çš„ startAsync() æ–¹æ³•å¼€å¯å¼‚æ­¥æ¨¡å¼ã€‚
+ * 2ï¼Œé€šè¿‡ ServletRequest è·å– ServletInputStreamï¼Œå¹¶ä¸ºå…¶è®¾ç½®ç›‘å¬å™¨ã€‚
+ * 3ï¼Œç›‘å¬å™¨è¦å®ç° ReadListener æ¥å£ï¼Œåœ¨è¯¥ç›‘å¬å™¨çš„æ–¹æ³•ä¸­è¯»å–æ•°æ®ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-1-11
+ * åˆ›å»ºæ—¥æœŸï¼š2014-1-11
  */
 @WebServlet(name="asyncio", urlPatterns={"/asyncio.do"}, asyncSupported=true)
 public class AsyncIOServlet extends HttpServlet {
@@ -41,20 +41,20 @@ public class AsyncIOServlet extends HttpServlet {
 		response.setContentType("text/html;charset=GBK");
 		
 		PrintWriter out = response.getWriter();
-		out.println("<title>·Ç×èÈûIOÊ¾Àı</title>");
-		out.println("½øÈëservletµÄÊ±¼ä £º" + new Date() + "</br>");
+		out.println("<title>éé˜»å¡IOç¤ºä¾‹</title>");
+		out.println("è¿›å…¥servletçš„æ—¶é—´ ï¼š" + new Date() + "</br>");
 		
-		// µÚÒ»²½
+		// ç¬¬ä¸€æ­¥
 		AsyncContext async = request.startAsync();
 		async.setTimeout(30 * 1000);
-		// µÚ¶ş²½
-		// ServletInputStream.setReadListener(ReadListener) ·½·¨ÔÊĞí¼àÌıÆ÷ÒÔ·Ç×èÈûIO¶ÁÈ¡Êı¾İ¡£
-		// ÕâÑùÒ»À´£¬¾ÍÎŞĞèÔÚ Servlet ÖĞÊ¹ÓÃ×èÈû IO ¶ÁÈ¡Êı¾İÁË£¬¶øÊÇ¸ÄÓÉ ReadListener ¸ºÔğ¶ÁÈ¡Êı¾İ¡£
-		// ÕâÑù Servlet ¾Í¿ÉÒÔ ¼ÌĞøÏòÏÂÖ´ĞĞ£¬²»»áÒòÎª IO ×èÈûÏß³Ì£¬Òò´ËÌáÉıÁË Servlet µÄĞÔÄÜ¡£
+		// ç¬¬äºŒæ­¥
+		// ServletInputStream.setReadListener(ReadListener) æ–¹æ³•å…è®¸ç›‘å¬å™¨ä»¥éé˜»å¡IOè¯»å–æ•°æ®ã€‚
+		// è¿™æ ·ä¸€æ¥ï¼Œå°±æ— éœ€åœ¨ Servlet ä¸­ä½¿ç”¨é˜»å¡ IO è¯»å–æ•°æ®äº†ï¼Œè€Œæ˜¯æ”¹ç”± ReadListener è´Ÿè´£è¯»å–æ•°æ®ã€‚
+		// è¿™æ · Servlet å°±å¯ä»¥ ç»§ç»­å‘ä¸‹æ‰§è¡Œï¼Œä¸ä¼šå› ä¸º IO é˜»å¡çº¿ç¨‹ï¼Œå› æ­¤æå‡äº† Servlet çš„æ€§èƒ½ã€‚
 		ServletInputStream inputStream = request.getInputStream();
 		inputStream.setReadListener(new MyReadListener(inputStream, async));
 		
-		out.println("½áÊøservletµÄÊ±¼ä £º" + new Date() + "</br>");
+		out.println("ç»“æŸservletçš„æ—¶é—´ ï¼š" + new Date() + "</br>");
 		out.flush();
 	}
 }
