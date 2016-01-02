@@ -1,6 +1,0 @@
-
-JSP2主要新特性如下：
-1，直接配置JSP属性。
-2，表达式语言（Expression Language）。
-3，简化的自定义标签API。
-4，Tag文件语法。

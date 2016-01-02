@@ -1,2 +1,0 @@
-
-详见  annotation.FileUploadServlet 和 fileupload.jsp。

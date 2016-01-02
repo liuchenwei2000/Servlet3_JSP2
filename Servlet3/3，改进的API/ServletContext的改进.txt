@@ -1,7 +1,0 @@
-
-ServletContext允许通过编程的方式动态注册Servlet、Filter，并允许动态设置Web应用的初始化参数。
-
-多个重载的addServlet：动态地注册Servlet。
-多个重载的addFilter：动态地注册Filter。
-多个重载的addListener：动态地注册Listener。
-setInitParameter(String name, String value)：为Web应用设置初始化参数。
